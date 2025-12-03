@@ -1,0 +1,26 @@
+// URLs d'images génériques depuis Unsplash (libres de droit)
+export const images = {
+  heroConstruction: 'https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=1200&h=800&fit=crop',
+  renovationInterior: 'https://images.unsplash.com/photo-1586023492125-27b2c04ef9fc?w=800&h=600&fit=crop',
+  renovationExterior: 'https://images.unsplash.com/photo-1564013799919-ab600027ffc6?w=800&h=600&fit=crop',
+  construction: 'https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=800&h=600&fit=crop',
+  teamWork: 'https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=800&h=600&fit=crop',
+  tools: 'https://images.unsplash.com/photo-1504148455328-c376907d081c?w=800&h=600&fit=crop',
+  kitchen: 'https://images.unsplash.com/photo-1556912172-45b7abe8b7c1?w=800&h=600&fit=crop',
+  bathroom: 'https://images.unsplash.com/photo-1620626011761-996317b8d101?w=800&h=600&fit=crop',
+  facade: 'https://images.unsplash.com/photo-1564013799919-ab600027ffc6?w=800&h=600&fit=crop',
+  roof: 'https://images.unsplash.com/photo-1590725140246-20acdee442be?w=800&h=600&fit=crop',
+  extension: 'https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=800&h=600&fit=crop',
+  emergency: 'https://images.unsplash.com/photo-1504148455328-c376907d081c?w=800&h=600&fit=crop',
+  about: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=600&h=600&fit=crop',
+  blog1: 'https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=800&h=500&fit=crop',
+  blog2: 'https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=800&h=500&fit=crop',
+  blog3: 'https://images.unsplash.com/photo-1586023492125-27b2c04ef9fc?w=800&h=500&fit=crop',
+  project1: 'https://images.unsplash.com/photo-1586023492125-27b2c04ef9fc?w=600&h=400&fit=crop',
+  project2: 'https://images.unsplash.com/photo-1564013799919-ab600027ffc6?w=600&h=400&fit=crop',
+  project3: 'https://images.unsplash.com/photo-1556912172-45b7abe8b7c1?w=600&h=400&fit=crop',
+  project4: 'https://images.unsplash.com/photo-1620626011761-996317b8d101?w=600&h=400&fit=crop',
+  project5: 'https://images.unsplash.com/photo-1590725140246-20acdee442be?w=600&h=400&fit=crop',
+  project6: 'https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=600&h=400&fit=crop',
+};
+
