@@ -2,8 +2,7 @@ import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { PageContainer } from '../components/layout/PageContainer';
-import { SectionTitle } from '../components/shared/SectionTitle';
-import { SectionWrapper } from '../shared/SectionWrapper';
+import { SectionWrapper } from '../components/shared/SectionWrapper';
 import { Card } from '../components/ui/Card';
 import { temoignages } from '../data/temoignages';
 import { Star, Quote } from 'lucide-react';
@@ -48,7 +47,7 @@ export const Temoignages = () => {
 
         <SectionWrapper>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {temoignages.map((temoignage, index) => (
+            {temoignages.map((temoignage) => (
               <Card key={temoignage.id} className="p-6">
                 <div className="flex items-center mb-4">
                   {renderStars(temoignage.note)}

@@ -3,7 +3,7 @@ import { motion } from 'framer-motion';
 import { services } from '../../data/services';
 import { Card } from '../ui/Card';
 import { SectionTitle } from '../shared/SectionTitle';
-import { SectionWrapper } from '../shared/SectionWrapper';
+import { SectionWrapper } from '../components/shared/SectionWrapper';
 import { ArrowRight } from 'lucide-react';
 
 export const ServicesPreview = () => {
@@ -16,7 +16,7 @@ export const ServicesPreview = () => {
         subtitle="Des solutions complètes pour tous vos projets de rénovation et construction"
       />
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-        {featuredServices.map((service, index) => {
+        {featuredServices.map((service) => {
           const Icon = service.icon;
           return (
             <Card key={service.id} className="p-6">

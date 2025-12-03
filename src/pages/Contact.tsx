@@ -1,7 +1,7 @@
 import { Helmet } from 'react-helmet-async';
 import { motion } from 'framer-motion';
 import { PageContainer } from '../components/layout/PageContainer';
-import { SectionWrapper } from '../shared/SectionWrapper';
+import { SectionWrapper } from '../components/shared/SectionWrapper';
 import { FormContact } from '../components/forms/FormContact';
 import { FormDevis } from '../components/forms/FormDevis';
 import { Phone, Mail, MapPin, Clock } from 'lucide-react';

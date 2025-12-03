@@ -1,8 +1,7 @@
 import { Helmet } from 'react-helmet-async';
 import { motion } from 'framer-motion';
 import { PageContainer } from '../components/layout/PageContainer';
-import { SectionTitle } from '../components/shared/SectionTitle';
-import { SectionWrapper } from '../shared/SectionWrapper';
+import { SectionWrapper } from '../components/shared/SectionWrapper';
 import { Accordion } from '../components/ui/Accordion';
 import { faqs } from '../data/faq';
 import { Link } from 'react-router-dom';
@@ -38,7 +37,7 @@ export const FAQ = () => {
         <SectionWrapper>
           <div className="max-w-3xl mx-auto">
             <div className="space-y-4">
-              {faqs.map((faq, index) => (
+              {faqs.map((faq) => (
                 <Accordion key={faq.id} title={faq.question}>
                   <p>{faq.reponse}</p>
                 </Accordion>

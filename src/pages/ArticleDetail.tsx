@@ -2,7 +2,7 @@ import { useParams, Link } from 'react-router-dom';
 import { Helmet } from 'react-helmet-async';
 import { motion } from 'framer-motion';
 import { PageContainer } from '../components/layout/PageContainer';
-import { SectionWrapper } from '../shared/SectionWrapper';
+import { SectionWrapper } from '../components/shared/SectionWrapper';
 import { articles } from '../data/articles';
 import { Calendar, ArrowLeft } from 'lucide-react';
 import { Button } from '../components/ui/Button';

@@ -3,7 +3,7 @@ import { motion } from 'framer-motion';
 import { realisations } from '../../data/realisations';
 import { Card } from '../ui/Card';
 import { SectionTitle } from '../shared/SectionTitle';
-import { SectionWrapper } from '../shared/SectionWrapper';
+import { SectionWrapper } from '../components/shared/SectionWrapper';
 import { MapPin, ArrowRight } from 'lucide-react';
 
 export const FeaturedProjects = () => {
@@ -16,7 +16,7 @@ export const FeaturedProjects = () => {
         subtitle="Découvrez quelques-uns de nos projets récents"
       />
       <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-        {featuredProjects.map((project, index) => (
+        {featuredProjects.map((project) => (
           <Card key={project.id} className="overflow-hidden">
             <div className="relative h-64 overflow-hidden">
               <img

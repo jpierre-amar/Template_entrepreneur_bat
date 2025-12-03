@@ -2,10 +2,10 @@ import { useState } from 'react';
 import { Helmet } from 'react-helmet-async';
 import { motion } from 'framer-motion';
 import { PageContainer } from '../components/layout/PageContainer';
-import { SectionTitle } from '../components/shared/SectionTitle';
 import { SectionWrapper } from '../components/shared/SectionWrapper';
 import { Card } from '../components/ui/Card';
-import { realisations, Realisation } from '../data/realisations';
+import { realisations } from '../data/realisations';
+import type { Realisation } from '../data/realisations';
 import { MapPin, X } from 'lucide-react';
 
 export const Realisations = () => {
@@ -70,10 +70,10 @@ export const Realisations = () => {
 
           {/* Grille de projets */}
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {filteredProjects.map((project, index) => (
+            {filteredProjects.map((project) => (
               <Card
                 key={project.id}
-                className="overflow-hidden cursor-pointer"
+                className="overflow-hidden"
                 onClick={() => setSelectedProject(project)}
               >
                 <div className="relative h-64 overflow-hidden">

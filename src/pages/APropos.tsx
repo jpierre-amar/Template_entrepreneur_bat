@@ -2,7 +2,7 @@ import { Helmet } from 'react-helmet-async';
 import { motion } from 'framer-motion';
 import { PageContainer } from '../components/layout/PageContainer';
 import { SectionTitle } from '../components/shared/SectionTitle';
-import { SectionWrapper } from '../shared/SectionWrapper';
+import { SectionWrapper } from '../components/shared/SectionWrapper';
 import { Card } from '../components/ui/Card';
 import { images } from '../data/images';
 import { CheckCircle, Shield, Clock, Users, Award, Heart } from 'lucide-react';

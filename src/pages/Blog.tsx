@@ -2,8 +2,7 @@ import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { PageContainer } from '../components/layout/PageContainer';
-import { SectionTitle } from '../components/shared/SectionTitle';
-import { SectionWrapper } from '../shared/SectionWrapper';
+import { SectionWrapper } from '../components/shared/SectionWrapper';
 import { Card } from '../components/ui/Card';
 import { articles } from '../data/articles';
 import { Calendar, ArrowRight } from 'lucide-react';
@@ -46,7 +45,7 @@ export const Blog = () => {
 
         <SectionWrapper>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {articles.map((article, index) => (
+            {articles.map((article) => (
               <Card key={article.id} className="overflow-hidden">
                 <div className="relative h-48 overflow-hidden">
                   <img

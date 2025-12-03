@@ -1,7 +1,7 @@
 import { motion } from 'framer-motion';
 import { CheckCircle, TrendingUp, Heart, Award } from 'lucide-react';
 import { SectionTitle } from '../shared/SectionTitle';
-import { SectionWrapper } from '../shared/SectionWrapper';
+import { SectionWrapper } from '../components/shared/SectionWrapper';
 
 const reasons = [
   {

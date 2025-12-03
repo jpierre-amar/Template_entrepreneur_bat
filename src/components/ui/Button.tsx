@@ -1,4 +1,4 @@
-import { ButtonHTMLAttributes, ReactNode } from 'react';
+import type { ButtonHTMLAttributes, ReactNode } from 'react';
 import { motion } from 'framer-motion';
 
 interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
@@ -20,12 +20,14 @@ export const Button = ({
     outline: 'border-2 border-primary text-primary hover:bg-primary hover:text-white'
   };
 
+  const { type, ...restProps } = props;
   return (
     <motion.button
       whileHover={{ scale: 1.05 }}
       whileTap={{ scale: 0.95 }}
       className={`${baseClasses} ${variantClasses[variant]} ${className}`}
-      {...props}
+      type={type || 'button'}
+      {...restProps}
     >
       {children}
     </motion.button>

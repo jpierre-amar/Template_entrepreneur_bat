@@ -55,7 +55,7 @@ export const Services = () => {
                 subtitle="Des prestations de qualité pour transformer vos projets en réalité"
               />
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                {categoryServices.map((service, index) => {
+                {categoryServices.map((service) => {
                   const Icon = service.icon;
                   return (
                     <Card key={service.id} className="p-6">
