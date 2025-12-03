@@ -3,7 +3,7 @@ import { motion } from 'framer-motion';
 import { services } from '../../data/services';
 import { Card } from '../ui/Card';
 import { SectionTitle } from '../shared/SectionTitle';
-import { SectionWrapper } from '../components/shared/SectionWrapper';
+import { SectionWrapper } from '../shared/SectionWrapper';
 import { ArrowRight } from 'lucide-react';
 
 export const ServicesPreview = () => {

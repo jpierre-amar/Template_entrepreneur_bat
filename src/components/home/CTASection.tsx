@@ -1,7 +1,7 @@
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { ArrowRight, Phone } from 'lucide-react';
-import { SectionWrapper } from '../components/shared/SectionWrapper';
+import { SectionWrapper } from '../shared/SectionWrapper';
 
 export const CTASection = () => {
   return (
