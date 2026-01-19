@@ -1,9 +1,10 @@
 import { useState, useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
-import { Menu, X, Phone, ArrowRight } from "lucide-react";
+import { Menu, X, Phone, ArrowRight, Sun, Moon } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
+import { useTheme } from "@/hooks/useTheme";
 
 const navLinks = [
   { path: "/", label: "Accueil" },
@@ -19,6 +20,7 @@ export const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
   const location = useLocation();
+  const { resolvedTheme, toggleTheme } = useTheme();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -95,8 +97,41 @@ export const Navbar = () => {
             ))}
           </div>
 
-          {/* CTA Button */}
-          <div className="hidden lg:flex items-center space-x-4">
+          {/* CTA & Theme Toggle */}
+          <div className="hidden lg:flex items-center space-x-3">
+            {/* Theme Toggle */}
+            <motion.button
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
+              onClick={toggleTheme}
+              className="relative w-10 h-10 rounded-xl bg-muted/50 border border-border/50 flex items-center justify-center text-muted-foreground hover:text-secondary hover:border-secondary/30 transition-all overflow-hidden"
+              aria-label="Toggle theme"
+            >
+              <AnimatePresence mode="wait" initial={false}>
+                {resolvedTheme === "dark" ? (
+                  <motion.div
+                    key="sun"
+                    initial={{ y: -20, opacity: 0 }}
+                    animate={{ y: 0, opacity: 1 }}
+                    exit={{ y: 20, opacity: 0 }}
+                    transition={{ duration: 0.2 }}
+                  >
+                    <Sun className="w-5 h-5" />
+                  </motion.div>
+                ) : (
+                  <motion.div
+                    key="moon"
+                    initial={{ y: -20, opacity: 0 }}
+                    animate={{ y: 0, opacity: 1 }}
+                    exit={{ y: 20, opacity: 0 }}
+                    transition={{ duration: 0.2 }}
+                  >
+                    <Moon className="w-5 h-5" />
+                  </motion.div>
+                )}
+              </AnimatePresence>
+            </motion.button>
+
             <a
               href="tel:+33612345678"
               className="flex items-center text-sm text-muted-foreground hover:text-secondary transition-colors"
@@ -112,15 +147,29 @@ export const Navbar = () => {
             </Link>
           </div>
 
-          {/* Mobile menu button */}
-          <motion.button
-            whileTap={{ scale: 0.95 }}
-            onClick={() => setIsOpen(!isOpen)}
-            className="lg:hidden p-2 rounded-xl text-foreground hover:bg-muted transition-colors"
-            aria-label="Toggle menu"
-          >
-            {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
-          </motion.button>
+          {/* Mobile: Theme toggle + Menu button */}
+          <div className="lg:hidden flex items-center space-x-2">
+            <motion.button
+              whileTap={{ scale: 0.95 }}
+              onClick={toggleTheme}
+              className="p-2 rounded-xl text-foreground hover:bg-muted transition-colors"
+              aria-label="Toggle theme"
+            >
+              {resolvedTheme === "dark" ? (
+                <Sun className="w-5 h-5" />
+              ) : (
+                <Moon className="w-5 h-5" />
+              )}
+            </motion.button>
+            <motion.button
+              whileTap={{ scale: 0.95 }}
+              onClick={() => setIsOpen(!isOpen)}
+              className="p-2 rounded-xl text-foreground hover:bg-muted transition-colors"
+              aria-label="Toggle menu"
+            >
+              {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+            </motion.button>
+          </div>
         </div>
       </div>
 
