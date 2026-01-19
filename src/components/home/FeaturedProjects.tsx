@@ -53,11 +53,11 @@ export const FeaturedProjects = () => {
                   <div className="flex gap-4 text-sm text-foreground/80">
                     <div className="flex items-center">
                       <Calendar className="w-4 h-4 mr-1 text-secondary" />
-                      {project.duration || "3 mois"}
+                      {project.details?.duree || "3 mois"}
                     </div>
                     <div className="flex items-center">
                       <Ruler className="w-4 h-4 mr-1 text-secondary" />
-                      {project.surface || "120 m²"}
+                      {project.details?.surface || "120 m²"}
                     </div>
                   </div>
                 </div>
