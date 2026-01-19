@@ -1,13 +1,13 @@
-import { Routes, Route } from 'react-router-dom';
-import { Home } from '../pages/Home';
-import { Services } from '../pages/Services';
-import { Realisations } from '../pages/Realisations';
-import { APropos } from '../pages/APropos';
-import { Temoignages } from '../pages/Temoignages';
-import { Blog } from '../pages/Blog';
-import { ArticleDetail } from '../pages/ArticleDetail';
-import { FAQ } from '../pages/FAQ';
-import { Contact } from '../pages/Contact';
+import { Routes, Route } from "react-router-dom";
+import { Home } from "@/pages/Home";
+import { Services } from "@/pages/Services";
+import { Realisations } from "@/pages/Realisations";
+import { APropos } from "@/pages/APropos";
+import { Temoignages } from "@/pages/Temoignages";
+import { Blog } from "@/pages/Blog";
+import { ArticleDetail } from "@/pages/ArticleDetail";
+import { FAQ } from "@/pages/FAQ";
+import { Contact } from "@/pages/Contact";
 
 export const AppRouter = () => {
   return (
@@ -24,4 +24,3 @@ export const AppRouter = () => {
     </Routes>
   );
 };
-
