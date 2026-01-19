@@ -9,13 +9,13 @@ import {
   Linkedin, 
   ArrowRight,
   Clock,
-  Shield
+  Leaf
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 const navLinks = [
   { path: "/services", label: "Services" },
-  { path: "/realisations", label: "Réalisations" },
+  { path: "/realisations", label: "Galerie" },
   { path: "/a-propos", label: "À propos" },
   { path: "/temoignages", label: "Témoignages" },
   { path: "/blog", label: "Blog" },
@@ -24,18 +24,18 @@ const navLinks = [
 ];
 
 const services = [
-  "Rénovation Intérieure",
+  "Conception",
+  "Rénovation",
+  "Agencement d'espace",
+  "Menuiserie (Koala)",
   "Rénovation Extérieure",
-  "Construction & Extension",
-  "Dépannage & Urgences",
-  "Plomberie",
-  "Menuiserie",
+  "Construction Éco-responsable",
 ];
 
 const socialLinks = [
-  { icon: Facebook, href: "#", label: "Facebook" },
-  { icon: Instagram, href: "#", label: "Instagram" },
-  { icon: Linkedin, href: "#", label: "LinkedIn" },
+  { icon: Facebook, href: "https://www.facebook.com/", label: "Facebook" },
+  { icon: Instagram, href: "https://www.instagram.com/", label: "Instagram" },
+  { icon: Linkedin, href: "https://www.linkedin.com/", label: "LinkedIn" },
 ];
 
 export const Footer = () => {
@@ -57,32 +57,32 @@ export const Footer = () => {
             <div className="lg:col-span-1">
               <Link to="/" className="inline-flex items-center space-x-3 mb-6">
                 <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-secondary to-secondary/80 flex items-center justify-center shadow-glow">
-                  <span className="text-secondary-foreground font-display font-bold text-xl">B</span>
+                  <span className="text-secondary-foreground font-display font-bold text-xl">M</span>
                 </div>
                 <div>
                   <span className="text-xl font-display font-bold text-foreground">
-                    BTP <span className="text-gradient-gold">Pro</span>
+                    Maison <span className="text-gradient-gold">Meloni</span>
                   </span>
                   <p className="text-[10px] text-muted-foreground tracking-widest uppercase">
-                    Excellence & Qualité
+                    Votre projet, nos compétences
                   </p>
                 </div>
               </Link>
               
               <p className="text-muted-foreground leading-relaxed mb-6">
-                Votre partenaire de confiance pour tous vos projets de rénovation, 
-                construction et dépannage depuis plus de 10 ans.
+                Entreprise générale du bâtiment engagée dans la protection du patrimoine 
+                et de l'environnement. Rénovation, agencement et menuiserie en Provence.
               </p>
               
               {/* Certifications */}
               <div className="flex items-center space-x-4 text-sm text-muted-foreground">
                 <div className="flex items-center">
-                  <Shield className="w-4 h-4 text-secondary mr-1" />
-                  Décennale
+                  <Leaf className="w-4 h-4 text-secondary mr-1" />
+                  RGE
                 </div>
                 <div className="flex items-center">
                   <Clock className="w-4 h-4 text-secondary mr-1" />
-                  7j/7
+                  Depuis 2018
                 </div>
               </div>
             </div>
@@ -135,27 +135,33 @@ export const Footer = () => {
               <ul className="space-y-4">
                 <li>
                   <a 
-                    href="tel:+33612345678" 
+                    href="tel:0983322642" 
                     className="flex items-start space-x-3 text-muted-foreground hover:text-secondary transition-colors group"
                   >
                     <Phone className="w-5 h-5 mt-0.5 text-secondary flex-shrink-0" />
-                    <span>06 12 34 56 78</span>
+                    <span>09 83 32 26 42</span>
                   </a>
                 </li>
                 <li>
                   <a 
-                    href="mailto:contact@btppro.fr" 
+                    href="mailto:contact@maisonmeloni.com" 
                     className="flex items-start space-x-3 text-muted-foreground hover:text-secondary transition-colors group"
                   >
                     <Mail className="w-5 h-5 mt-0.5 text-secondary flex-shrink-0" />
-                    <span>contact@btppro.fr</span>
+                    <span>contact@maisonmeloni.com</span>
                   </a>
                 </li>
                 <li className="flex items-start space-x-3 text-muted-foreground">
                   <MapPin className="w-5 h-5 mt-0.5 text-secondary flex-shrink-0" />
                   <span>
-                    Montpellier et alentours<br />
-                    Rayon de 50 km
+                    27 chemin de Séverin<br />
+                    13200 Arles
+                  </span>
+                </li>
+                <li className="flex items-start space-x-3 text-muted-foreground">
+                  <Clock className="w-5 h-5 mt-0.5 text-secondary flex-shrink-0" />
+                  <span>
+                    Lun - Ven : 8h-12h / 14h-17h
                   </span>
                 </li>
               </ul>
@@ -166,6 +172,8 @@ export const Footer = () => {
                   <motion.a
                     key={social.label}
                     href={social.href}
+                    target="_blank"
+                    rel="noopener noreferrer"
                     whileHover={{ scale: 1.1 }}
                     whileTap={{ scale: 0.95 }}
                     className="w-10 h-10 rounded-xl bg-muted/50 border border-border/50 flex items-center justify-center text-muted-foreground hover:text-secondary hover:border-secondary/30 hover:bg-secondary/10 transition-all"
@@ -206,7 +214,7 @@ export const Footer = () => {
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
             <div className="flex flex-col md:flex-row items-center justify-between gap-4 text-sm text-muted-foreground">
               <p>
-                © {currentYear} BTP Pro. Tous droits réservés.
+                © {currentYear} Maison Meloni. Tous droits réservés.
               </p>
               <div className="flex items-center space-x-6">
                 <Link 

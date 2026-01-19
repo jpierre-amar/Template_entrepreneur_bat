@@ -6,51 +6,51 @@ import { FormContact } from "@/components/forms/FormContact";
 import { FormDevis } from "@/components/forms/FormDevis";
 import { Card, CardContent } from "@/components/ui/card";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
-import { Phone, Mail, MapPin, Clock, MessageSquare, FileText, Shield, CheckCircle } from "lucide-react";
+import { Phone, Mail, MapPin, Clock, MessageSquare, FileText, Leaf, CheckCircle } from "lucide-react";
 
 const contactInfo = [
   {
     icon: Phone,
     title: "Téléphone",
-    content: "06 12 34 56 78",
-    href: "tel:+33612345678",
-    description: "Lun-Ven: 8h-18h",
+    content: "09 83 32 26 42",
+    href: "tel:0983322642",
+    description: "Prix d'un appel local",
   },
   {
     icon: Mail,
     title: "Email",
-    content: "contact@btppro.fr",
-    href: "mailto:contact@btppro.fr",
-    description: "Réponse sous 48h",
+    content: "contact@maisonmeloni.com",
+    href: "mailto:contact@maisonmeloni.com",
+    description: "Réponse rapide",
   },
   {
     icon: MapPin,
-    title: "Zone d'intervention",
-    content: "Montpellier et alentours",
-    description: "Rayon de 50 km",
+    title: "Nos locaux",
+    content: "27 chemin de Séverin",
+    description: "13200 Arles",
   },
   {
     icon: Clock,
     title: "Horaires",
-    content: "Lun-Ven: 8h-18h | Sam: 9h-12h",
-    description: "Urgences: 7j/7",
+    content: "Lun-Ven: 8h-12h / 14h-17h",
+    description: "Sur rendez-vous",
   },
 ];
 
 const guarantees = [
-  { icon: Shield, text: "Garantie décennale" },
+  { icon: Leaf, text: "Certifié RGE" },
   { icon: CheckCircle, text: "Devis 100% gratuit" },
-  { icon: MessageSquare, text: "Réponse sous 48h" },
+  { icon: MessageSquare, text: "Réponse rapide" },
 ];
 
 export const Contact = () => {
   return (
     <>
       <Helmet>
-        <title>Contact & Devis gratuit - BTP Pro</title>
+        <title>Contact & Devis gratuit - Maison Meloni</title>
         <meta
           name="description"
-          content="Contactez-nous pour un devis gratuit et sans engagement. Formulaire de contact et demande de devis en ligne."
+          content="Contactez Maison Meloni pour un devis gratuit et sans engagement. Formulaire de contact et demande de devis en ligne pour vos projets en Provence."
         />
       </Helmet>
       <PageContainer>
@@ -76,12 +76,11 @@ export const Contact = () => {
               </motion.span>
               
               <h1 className="font-display text-4xl md:text-5xl lg:text-6xl font-bold text-foreground mb-6">
-                Parlons de votre <span className="text-gradient-gold">projet</span>
+                Un projet en <span className="text-gradient-gold">tête</span> ?
               </h1>
               
               <p className="text-lg md:text-xl text-muted-foreground leading-relaxed">
-                Demandez votre devis gratuit ou posez-nous vos questions. 
-                Notre équipe vous répond sous 48h.
+                Demandez votre devis gratuit ou venez nous rendre visite dans nos locaux à Arles.
               </p>
             </motion.div>
           </div>
@@ -113,7 +112,7 @@ export const Contact = () => {
                         className="flex-1 rounded-lg data-[state=active]:bg-secondary data-[state=active]:text-secondary-foreground"
                       >
                         <MessageSquare className="w-4 h-4 mr-2" />
-                        Contact général
+                        Nous écrire
                       </TabsTrigger>
                     </TabsList>
                     

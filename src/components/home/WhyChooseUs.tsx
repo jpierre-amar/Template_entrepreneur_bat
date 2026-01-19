@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { CheckCircle, TrendingUp, Heart, Award, Sparkles, Shield } from "lucide-react";
+import { Leaf, TrendingUp, Heart, Award, Sparkles, Recycle } from "lucide-react";
 import { SectionTitle } from "@/components/shared/SectionTitle";
 import { SectionWrapper } from "@/components/shared/SectionWrapper";
 
@@ -7,38 +7,38 @@ const reasons = [
   {
     icon: Award,
     title: "Qualité exceptionnelle",
-    description: "Nous utilisons uniquement des matériaux de première qualité et suivons les normes les plus strictes du secteur.",
-    highlight: "Matériaux premium",
+    description: "Nous utilisons des matériaux nobles et bio-sourcés, d'origine naturelle, végétale ou minérale pour des travaux durables.",
+    highlight: "Matériaux nobles",
   },
   {
-    icon: TrendingUp,
-    title: "Transparence totale",
-    description: "Devis détaillés sans surprise, suivi régulier de votre projet et communication claire à chaque étape.",
-    highlight: "Zéro surprise",
+    icon: Leaf,
+    title: "Certifié RGE",
+    description: "Reconnus Garant Environnemental avec l'agrément « les pro de la performance énergétique » pour votre tranquillité.",
+    highlight: "Éco-responsable",
   },
   {
     icon: Heart,
-    title: "Proximité & écoute",
-    description: "Nous sommes à votre écoute pour comprendre vos besoins et vous accompagner dans votre projet.",
-    highlight: "Accompagnement personnalisé",
+    title: "Protection du patrimoine",
+    description: "Notre mission est d'entretenir et valoriser le patrimoine régional provençal avec respect et savoir-faire.",
+    highlight: "Héritage préservé",
   },
   {
-    icon: CheckCircle,
-    title: "Respect des délais",
-    description: "Nous nous engageons à respecter les délais convenus et à vous tenir informé de l'avancement des travaux.",
-    highlight: "Ponctualité garantie",
+    icon: Recycle,
+    title: "Circuits courts",
+    description: "Nous favorisons au maximum les circuits courts pour soutenir l'économie locale et réduire notre empreinte carbone.",
+    highlight: "Local & durable",
   },
   {
-    icon: Shield,
-    title: "Garantie décennale",
-    description: "Tous nos travaux sont couverts par notre assurance décennale pour votre tranquillité d'esprit.",
-    highlight: "Protection 10 ans",
+    icon: TrendingUp,
+    title: "Projets clé en main",
+    description: "De la conception à la réalisation, nous gérons votre projet de A à Z à travers toute la Provence.",
+    highlight: "Zéro souci",
   },
   {
     icon: Sparkles,
-    title: "Finitions soignées",
-    description: "Chaque détail compte. Nous portons une attention particulière aux finitions pour un résultat impeccable.",
-    highlight: "Perfection des détails",
+    title: "Koala Menuiserie",
+    description: "Notre département dédié à la menuiserie sur mesure pour tous vos besoins en bois et aménagements.",
+    highlight: "Expertise menuiserie",
   },
 ];
 
@@ -46,9 +46,9 @@ export const WhyChooseUs = () => {
   return (
     <SectionWrapper className="bg-gradient-to-b from-muted/30 to-background">
       <SectionTitle
-        badge="Pourquoi nous"
+        badge="Nos engagements"
         title="L'excellence comme standard"
-        subtitle="Des valeurs qui font la différence et guident chacune de nos interventions depuis plus de 10 ans."
+        subtitle="Une entreprise moderne et engagée dans la protection du patrimoine et de l'environnement depuis 2018."
       />
       
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">

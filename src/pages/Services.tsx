@@ -10,28 +10,28 @@ import { services } from "@/data/services";
 import { ArrowRight, CheckCircle, Phone } from "lucide-react";
 
 export const Services = () => {
-  const categories = ["interior", "exterior", "construction", "emergency"] as const;
+  const categories = ["conception", "renovation", "menuiserie", "agencement"] as const;
   const categoryLabels = {
-    interior: "Rénovation Intérieure",
-    exterior: "Rénovation Extérieure",
-    construction: "Construction & Extension",
-    emergency: "Dépannage & Urgences",
+    conception: "Conception & Construction",
+    renovation: "Rénovation",
+    menuiserie: "Menuiserie",
+    agencement: "Agencement d'espace",
   };
 
   const categoryDescriptions = {
-    interior: "Transformez vos espaces de vie avec un savoir-faire d'exception",
-    exterior: "Redonnez un nouveau souffle à votre façade et vos extérieurs",
-    construction: "Agrandissez votre espace avec des solutions sur mesure",
-    emergency: "Intervention rapide 7j/7 pour tous vos dépannages",
+    conception: "De l'étude de faisabilité à la réalisation clé en main",
+    renovation: "Valorisation du patrimoine et rénovation complète",
+    menuiserie: "Notre département Koala Menuiserie pour tous vos projets bois",
+    agencement: "Optimisation et aménagement sur mesure de vos espaces",
   };
 
   return (
     <>
       <Helmet>
-        <title>Nos Services - BTP Pro | Excellence en Rénovation & Construction</title>
+        <title>Nos Services - Maison Meloni | Rénovation & Menuiserie en Provence</title>
         <meta
           name="description"
-          content="Découvrez tous nos services : rénovation intérieure et extérieure, construction, extension, dépannage et urgences. Solutions complètes pour tous vos projets."
+          content="Découvrez les services de Maison Meloni : conception, rénovation, menuiserie Koala et agencement d'espace. Solutions éco-responsables en Provence."
         />
       </Helmet>
       <PageContainer>
@@ -57,12 +57,12 @@ export const Services = () => {
               </motion.span>
               
               <h1 className="font-display text-4xl md:text-5xl lg:text-6xl font-bold text-foreground mb-6">
-                Des services d'<span className="text-gradient-gold">excellence</span>
+                Votre projet, nos <span className="text-gradient-gold">compétences</span>
               </h1>
               
               <p className="text-lg md:text-xl text-muted-foreground leading-relaxed">
-                Des solutions complètes et sur mesure pour tous vos projets de rénovation, 
-                construction et dépannage, réalisées par des artisans qualifiés.
+                Des solutions complètes et éco-responsables pour tous vos projets 
+                de rénovation et d'agencement en Provence.
               </p>
             </motion.div>
           </div>
@@ -79,7 +79,7 @@ export const Services = () => {
               className={catIndex % 2 === 1 ? "bg-muted/30" : ""}
             >
               <SectionTitle
-                badge={category === "emergency" ? "7j/7" : "Expertise"}
+                badge={category === "menuiserie" ? "Koala" : "Expertise"}
                 title={categoryLabels[category]}
                 subtitle={categoryDescriptions[category]}
               />
@@ -160,8 +160,8 @@ export const Services = () => {
               Un projet <span className="text-gradient-gold">spécifique</span> ?
             </h2>
             <p className="text-muted-foreground mb-8 max-w-2xl mx-auto">
-              Contactez-nous pour discuter de votre projet et obtenir un devis personnalisé, 
-              gratuit et sans engagement.
+              Venez nous rendre visite dans nos locaux à Arles ou contactez-nous 
+              pour discuter de votre projet.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link to="/contact">
@@ -170,10 +170,10 @@ export const Services = () => {
                   <ArrowRight className="w-5 h-5 ml-2" />
                 </Button>
               </Link>
-              <a href="tel:+33612345678">
+              <a href="tel:0983322642">
                 <Button variant="outline" size="xl">
                   <Phone className="w-5 h-5 mr-2" />
-                  06 12 34 56 78
+                  09 83 32 26 42
                 </Button>
               </a>
             </div>

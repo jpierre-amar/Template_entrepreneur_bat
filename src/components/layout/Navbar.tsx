@@ -9,7 +9,7 @@ import { useTheme } from "@/hooks/useTheme";
 const navLinks = [
   { path: "/", label: "Accueil" },
   { path: "/services", label: "Services" },
-  { path: "/realisations", label: "Réalisations" },
+  { path: "/realisations", label: "Galerie" },
   { path: "/a-propos", label: "À propos" },
   { path: "/temoignages", label: "Témoignages" },
   { path: "/blog", label: "Blog" },
@@ -57,17 +57,17 @@ export const Navbar = () => {
             >
               <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-secondary to-secondary/80 flex items-center justify-center shadow-glow">
                 <span className="text-secondary-foreground font-display font-bold text-xl">
-                  B
+                  M
                 </span>
               </div>
               <div className="absolute -inset-1 bg-secondary/20 rounded-xl blur-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
             </motion.div>
             <div className="hidden sm:block">
               <span className="text-xl font-display font-bold text-foreground">
-                BTP <span className="text-gradient-gold">Pro</span>
+                Maison <span className="text-gradient-gold">Meloni</span>
               </span>
               <p className="text-[10px] text-muted-foreground tracking-widest uppercase">
-                Excellence & Qualité
+                Votre projet, nos compétences
               </p>
             </div>
           </Link>
@@ -133,11 +133,11 @@ export const Navbar = () => {
             </motion.button>
 
             <a
-              href="tel:+33612345678"
+              href="tel:0983322642"
               className="flex items-center text-sm text-muted-foreground hover:text-secondary transition-colors"
             >
               <Phone className="w-4 h-4 mr-2" />
-              <span className="hidden xl:inline">06 12 34 56 78</span>
+              <span className="hidden xl:inline">09 83 32 26 42</span>
             </a>
             <Link to="/contact">
               <Button variant="premium" size="default">
@@ -207,11 +207,11 @@ export const Navbar = () => {
               
               <div className="pt-4 space-y-3 border-t border-border mt-4">
                 <a
-                  href="tel:+33612345678"
+                  href="tel:0983322642"
                   className="flex items-center justify-center px-4 py-3 text-muted-foreground hover:text-secondary transition-colors"
                 >
                   <Phone className="w-5 h-5 mr-2" />
-                  06 12 34 56 78
+                  09 83 32 26 42
                 </a>
                 <Link to="/contact" className="block">
                   <Button variant="premium" size="lg" className="w-full">

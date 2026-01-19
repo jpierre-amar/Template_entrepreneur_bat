@@ -1,18 +1,18 @@
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
-import { ArrowRight, Play, Shield, Clock, Award, CheckCircle } from "lucide-react";
+import { ArrowRight, Play, Leaf, Clock, Award, CheckCircle } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 const stats = [
   { value: "10+", label: "Années d'expérience" },
-  { value: "500+", label: "Projets réalisés" },
-  { value: "98%", label: "Clients satisfaits" },
+  { value: "100+", label: "Projets réalisés" },
+  { value: "100%", label: "Engagement qualité" },
 ];
 
 const features = [
-  { icon: Shield, text: "Garantie décennale" },
-  { icon: Clock, text: "Intervention rapide" },
-  { icon: Award, text: "Artisans certifiés" },
+  { icon: Leaf, text: "Certifié RGE" },
+  { icon: Clock, text: "Depuis 2018" },
+  { icon: Award, text: "Matériaux bio-sourcés" },
 ];
 
 export const Hero = () => {
@@ -89,7 +89,7 @@ export const Hero = () => {
             >
               <span className="w-2 h-2 rounded-full bg-secondary animate-pulse mr-2" />
               <span className="text-sm font-medium text-secondary">
-                Expert BTP depuis 10 ans
+                Entreprise générale du bâtiment en Provence
               </span>
             </motion.div>
 
@@ -100,8 +100,8 @@ export const Hero = () => {
               transition={{ duration: 0.6, delay: 0.3 }}
               className="font-display text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold text-foreground mb-6 leading-[1.1]"
             >
-              L'excellence au service de vos{" "}
-              <span className="text-gradient-gold">projets</span>
+              Votre projet, nos{" "}
+              <span className="text-gradient-gold">compétences</span>
             </motion.h1>
 
             {/* Subtitle */}
@@ -111,8 +111,8 @@ export const Hero = () => {
               transition={{ duration: 0.6, delay: 0.4 }}
               className="text-lg md:text-xl text-muted-foreground mb-8 max-w-xl mx-auto lg:mx-0 leading-relaxed"
             >
-              Rénovation, construction et dépannage d'exception. 
-              Une équipe d'artisans qualifiés dédiée à la réussite de votre projet.
+              Rénovation, agencement d'espace et menuiserie sur mesure. 
+              Une entreprise moderne et engagée dans la protection du patrimoine et de l'environnement.
             </motion.p>
 
             {/* Features */}
@@ -195,11 +195,11 @@ export const Hero = () => {
                 {/* Trust badges */}
                 <div className="mt-8 pt-6 border-t border-border/50">
                   <div className="flex items-center justify-between text-sm text-muted-foreground">
-                    <span>Assurance décennale</span>
+                    <span>RGE</span>
                     <span>•</span>
-                    <span>Devis gratuit</span>
+                    <span>Circuits courts</span>
                     <span>•</span>
-                    <span>Sans engagement</span>
+                    <span>Bio-sourcé</span>
                   </div>
                 </div>
               </div>
@@ -212,14 +212,14 @@ export const Hero = () => {
               >
                 <div className="flex items-center space-x-3">
                   <div className="w-12 h-12 rounded-full bg-secondary/20 flex items-center justify-center">
-                    <Shield className="w-6 h-6 text-secondary" />
+                    <Leaf className="w-6 h-6 text-secondary" />
                   </div>
                   <div>
                     <div className="text-sm font-semibold text-foreground">
-                      Qualité garantie
+                      Éco-responsable
                     </div>
                     <div className="text-xs text-muted-foreground">
-                      Satisfaction client 98%
+                      Matériaux durables
                     </div>
                   </div>
                 </div>

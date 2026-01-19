@@ -1,5 +1,5 @@
 import { images } from './images';
-import { Wrench, Home, Building2, AlertCircle, Paintbrush, Hammer } from 'lucide-react';
+import { Compass, Home, Building2, Paintbrush, Hammer, Ruler } from 'lucide-react';
 
 export interface Service {
   id: string;
@@ -7,104 +7,105 @@ export interface Service {
   description: string;
   icon: React.ComponentType<{ className?: string }>;
   image: string;
-  category: 'interior' | 'exterior' | 'construction' | 'emergency';
+  category: 'conception' | 'renovation' | 'menuiserie' | 'agencement';
   features: string[];
 }
 
 export const services: Service[] = [
   {
-    id: 'renovation-interior',
-    title: 'Rénovation Intérieure',
-    description: 'Transformation complète de vos espaces intérieurs avec un savoir-faire d\'exception.',
+    id: 'conception',
+    title: 'Conception',
+    description: 'Profitez de notre expertise pour penser la conception de votre projet à vos côtés, du premier dessin à la réalisation finale.',
+    icon: Compass,
+    image: images.construction,
+    category: 'conception',
+    features: [
+      'Étude de faisabilité',
+      'Plans et dessins techniques',
+      'Conseils en aménagement',
+      'Optimisation des espaces',
+      'Choix des matériaux',
+      'Suivi de projet complet'
+    ]
+  },
+  {
+    id: 'renovation',
+    title: 'Rénovation',
+    description: 'Transformation complète de vos espaces avec un savoir-faire d\'exception et le respect du patrimoine régional.',
     icon: Home,
     image: images.renovationInterior,
-    category: 'interior',
+    category: 'renovation',
     features: [
-      'Rénovation de cuisine',
-      'Rénovation de salle de bain',
-      'Pose de sols (parquet, carrelage)',
-      'Peinture et revêtements muraux',
-      'Plomberie et électricité',
-      'Menuiserie sur mesure'
+      'Rénovation intérieure complète',
+      'Rénovation de façades',
+      'Valorisation du patrimoine',
+      'Isolation thermique',
+      'Mise aux normes',
+      'Solutions clé en main'
     ]
   },
   {
-    id: 'renovation-exterior',
-    title: 'Rénovation Extérieure',
-    description: 'Redonnez un nouveau souffle à votre façade et à vos extérieurs.',
-    icon: Paintbrush,
-    image: images.renovationExterior,
-    category: 'exterior',
+    id: 'agencement',
+    title: 'Agencement d\'espace',
+    description: 'Création et aménagement d\'espaces sur mesure, optimisés pour votre confort et votre style de vie.',
+    icon: Ruler,
+    image: images.kitchen,
+    category: 'agencement',
     features: [
-      'Ravalement de façade',
-      'Isolation thermique extérieure',
-      'Rénovation de toiture',
-      'Aménagement extérieur',
-      'Terrasses et balcons',
-      'Clôtures et portails'
-    ]
-  },
-  {
-    id: 'construction-extension',
-    title: 'Construction & Extension',
-    description: 'Agrandissez votre espace de vie avec des solutions sur mesure.',
-    icon: Building2,
-    image: images.construction,
-    category: 'construction',
-    features: [
-      'Construction neuve',
-      'Surélévation',
-      'Extension de maison',
+      'Agencement sur mesure',
+      'Optimisation des volumes',
+      'Création de rangements',
       'Aménagement de combles',
-      'Vérandas et pergolas',
-      'Garages et dépendances'
-    ]
-  },
-  {
-    id: 'depannage-urgence',
-    title: 'Dépannage & Urgences',
-    description: 'Intervention rapide 7j/7 pour tous vos dépannages urgents.',
-    icon: AlertCircle,
-    image: images.emergency,
-    category: 'emergency',
-    features: [
-      'Fuite d\'eau',
-      'Panne électrique',
-      'Dégât des eaux',
-      'Fermeture de porte',
-      'Réparations diverses',
-      'Intervention sous 2h'
-    ]
-  },
-  {
-    id: 'plomberie',
-    title: 'Plomberie',
-    description: 'Installation, réparation et maintenance de tous vos équipements sanitaires.',
-    icon: Wrench,
-    image: images.bathroom,
-    category: 'interior',
-    features: [
-      'Installation sanitaire',
-      'Réparation de fuites',
-      'Remplacement de robinetterie',
-      'Installation de chauffe-eau',
-      'Débouchage de canalisations'
+      'Espaces professionnels',
+      'Solutions personnalisées'
     ]
   },
   {
     id: 'menuiserie',
-    title: 'Menuiserie',
-    description: 'Création et installation de menuiseries sur mesure pour tous vos projets.',
+    title: 'Menuiserie (Koala)',
+    description: 'Notre département dédié Koala Menuiserie réalise tous vos projets de menuiserie avec des matériaux nobles et durables.',
     icon: Hammer,
-    image: images.kitchen,
-    category: 'interior',
+    image: images.bathroom,
+    category: 'menuiserie',
     features: [
       'Cuisines sur mesure',
-      'Dressing et rangements',
-      'Portes et fenêtres',
+      'Dressing et placards',
       'Escaliers',
-      'Parquets et lambris'
+      'Portes et fenêtres',
+      'Parquets',
+      'Mobilier sur mesure'
+    ]
+  },
+  {
+    id: 'renovation-exterieure',
+    title: 'Rénovation Extérieure',
+    description: 'Redonnez un nouveau souffle à votre façade et à vos extérieurs, dans le respect de l\'environnement.',
+    icon: Paintbrush,
+    image: images.renovationExterior,
+    category: 'renovation',
+    features: [
+      'Ravalement de façade',
+      'Enduits traditionnels',
+      'Isolation par l\'extérieur',
+      'Rénovation de toiture',
+      'Terrasses',
+      'Aménagements extérieurs'
+    ]
+  },
+  {
+    id: 'eco-construction',
+    title: 'Construction Éco-responsable',
+    description: 'Des solutions durables utilisant des matières bio-sourcées et des circuits courts, pour une construction respectueuse.',
+    icon: Building2,
+    image: images.emergency,
+    category: 'conception',
+    features: [
+      'Matériaux bio-sourcés',
+      'Circuits courts privilégiés',
+      'Performance énergétique',
+      'Certifications RGE',
+      'Éco-construction',
+      'Respect de l\'environnement'
     ]
   }
 ];
-

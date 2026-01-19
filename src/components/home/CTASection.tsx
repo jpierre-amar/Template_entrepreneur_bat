@@ -31,17 +31,17 @@ export const CTASection = () => {
                 transition={{ duration: 0.4, delay: 0.1 }}
                 className="inline-block mb-4 px-4 py-1.5 text-xs font-semibold tracking-widest uppercase bg-secondary/10 text-secondary border border-secondary/20 rounded-full"
               >
-                Contactez-nous
+                Un projet en tête ?
               </motion.span>
               
               <h2 className="font-display text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-6 leading-tight">
-                Prêt à démarrer votre{" "}
-                <span className="text-gradient-gold">projet</span> ?
+                Votre projet, nos{" "}
+                <span className="text-gradient-gold">compétences</span>
               </h2>
               
               <p className="text-lg text-muted-foreground mb-8 leading-relaxed">
                 Obtenez un devis gratuit et personnalisé pour votre projet de rénovation 
-                ou construction. Notre équipe vous répond sous 48h.
+                ou d'agencement. Notre équipe vous répond rapidement.
               </p>
               
               <div className="flex flex-col sm:flex-row gap-4">
@@ -51,10 +51,10 @@ export const CTASection = () => {
                     <ArrowRight className="w-5 h-5 ml-2" />
                   </Button>
                 </Link>
-                <a href="tel:+33612345678">
+                <a href="tel:0983322642">
                   <Button variant="outline" size="xl" className="w-full sm:w-auto">
                     <Phone className="w-5 h-5 mr-2" />
-                    06 12 34 56 78
+                    09 83 32 26 42
                   </Button>
                 </a>
               </div>
@@ -64,7 +64,7 @@ export const CTASection = () => {
             <div className="space-y-4">
               {/* Phone card */}
               <motion.a
-                href="tel:+33612345678"
+                href="tel:0983322642"
                 initial={{ opacity: 0, x: 20 }}
                 whileInView={{ opacity: 1, x: 0 }}
                 viewport={{ once: true }}
@@ -77,14 +77,14 @@ export const CTASection = () => {
                   </div>
                   <div>
                     <div className="text-sm text-muted-foreground mb-1">Appelez-nous</div>
-                    <div className="text-xl font-semibold text-foreground">06 12 34 56 78</div>
+                    <div className="text-xl font-semibold text-foreground">09 83 32 26 42</div>
                   </div>
                 </div>
               </motion.a>
               
               {/* Email card */}
               <motion.a
-                href="mailto:contact@btppro.fr"
+                href="mailto:contact@maisonmeloni.com"
                 initial={{ opacity: 0, x: 20 }}
                 whileInView={{ opacity: 1, x: 0 }}
                 viewport={{ once: true }}
@@ -97,12 +97,12 @@ export const CTASection = () => {
                   </div>
                   <div>
                     <div className="text-sm text-muted-foreground mb-1">Écrivez-nous</div>
-                    <div className="text-xl font-semibold text-foreground">contact@btppro.fr</div>
+                    <div className="text-xl font-semibold text-foreground">contact@maisonmeloni.com</div>
                   </div>
                 </div>
               </motion.a>
               
-              {/* Response time */}
+              {/* Location */}
               <motion.div
                 initial={{ opacity: 0, x: 20 }}
                 whileInView={{ opacity: 1, x: 0 }}
@@ -115,8 +115,8 @@ export const CTASection = () => {
                     <MessageSquare className="w-6 h-6 text-secondary" />
                   </div>
                   <div>
-                    <div className="text-sm text-secondary mb-1">Temps de réponse</div>
-                    <div className="text-xl font-semibold text-foreground">Sous 48h garantis</div>
+                    <div className="text-sm text-secondary mb-1">Nos locaux</div>
+                    <div className="text-xl font-semibold text-foreground">27 chemin de Séverin, Arles</div>
                   </div>
                 </div>
               </motion.div>
